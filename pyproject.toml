@@ -1,0 +1,31 @@
+[project]
+name = "crustdb"
+version = "0.1.0"
+description = "A Pydantic-inspired embedded database prototype."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+"" = "python"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.maturin]
+manifest-path = "crates/crustdb_py/Cargo.toml"
+module-name = "crustdb._native"
+python-source = "python"

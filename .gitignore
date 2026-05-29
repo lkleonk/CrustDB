@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.pyd
+*.pdb
+.pytest_cache/
+*.egg-info/
+app.crustdb/
+target/
+/internal/
